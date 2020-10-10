@@ -6,5 +6,6 @@ const Axios = axios.create({
 
 console.log(`Using URL ${process.env.BASE_URL || 'https://localhost'}. Env is ${process.env.BASE_URL}`)
 
+
 export default Axios;
 
