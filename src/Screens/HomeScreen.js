@@ -10,6 +10,7 @@ function HomeScreen(props) {
   const category = props.match.params.id ? props.match.params.id : '';
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
+  console.log(`Products ${products}`);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts(category));
@@ -52,7 +53,7 @@ function HomeScreen(props) {
       error ? <div>{error}</div> :
         <ul className="products">
           {
-            products.map(product =>
+            (products || []).map(product =>
               <li key={product._id}>
                 <div className="product">
                   <Link to={'/product/' + product._id}>
