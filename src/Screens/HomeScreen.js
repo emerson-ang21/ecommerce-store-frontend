@@ -53,7 +53,7 @@ function HomeScreen(props) {
       error ? <div>{error}</div> :
         <ul className="products">
           {
-            (products || []).map(product =>
+            (products && products.map(product =>
               <li key={product._id}>
                 <div className="product">
                   <Link to={'/product/' + product._id}>
@@ -68,7 +68,7 @@ function HomeScreen(props) {
                   <div className="product-rating">{product.rating} Stars ({product.numReiews} Reviews)</div>
                 </div>
               </li>)
-          }
+            )}
         </ul>
     }
   </>
