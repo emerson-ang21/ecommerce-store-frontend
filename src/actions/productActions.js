@@ -8,8 +8,8 @@ const listProducts = (category = '', searchKeyword = '', sortOrder = '') => asyn
     try {
 
       dispatch({ type: PRODUCT_LIST_REQUEST });
-      const { data } = await Axios.get("/api/products?category=" + category +	
-      "&searchKeyword=" + searchKeyword + "&sortOrder=" + sortOrder);;
+      console.log(`"/api/products?category=" + ${category} +	&searchKeyword=" + ${searchKeyword} + "&sortOrder=" + ${sortOrder}`);
+      const { data } = await Axios.get("/api/products?category=" + category +	"&searchKeyword=" + searchKeyword + "&sortOrder=" + sortOrder);
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     }
     catch (error) {
