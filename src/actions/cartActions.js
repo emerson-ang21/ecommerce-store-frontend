@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookie from "js-cookie";
 import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_SHIPPING, CART_SAVE_PAYMENT } from "../constants/cartConstants";
 
-axios.defaults.baseURL = process.env.BASE_URL || 'https://phfarms.herokuapp.com';
+axios.defaults.baseURL = process.env.BASE_URL || 'https://phfarms-server.herokuapp.com';
 
 const addToCart = (productId, qty) => async (dispatch, getState) => {
   try {
