@@ -13,8 +13,9 @@ const listProducts = (category = '', searchKeyword = '', sortOrder = '') => asyn
       console.log(`request: ${data}`);
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     }
-    catch (error) {
-
+    catch (error) 
+    {
+      console.log(`request_error: ${error}`);
       dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
     }
   }
