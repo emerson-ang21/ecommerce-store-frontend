@@ -10,6 +10,7 @@ const listProducts = (category = '', searchKeyword = '', sortOrder = '') => asyn
       dispatch({ type: PRODUCT_LIST_REQUEST });
       console.log(`"/api/products?category=" + ${category} +	&searchKeyword=" + ${searchKeyword} + "&sortOrder=" + ${sortOrder}`);
       const { data } = await Axios.get("/api/products?category=" + category +	"&searchKeyword=" + searchKeyword + "&sortOrder=" + sortOrder);
+      console.log(`request: ${data}`);
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     }
     catch (error) {
