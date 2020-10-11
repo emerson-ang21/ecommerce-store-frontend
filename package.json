@@ -7,10 +7,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+<<<<<<< HEAD
     "axios": "^0.20.0",
     "chalk": "^4.1.0",
     "each-async": "^1.1.1",
     "indent-string": "^4.0.0",
+=======
+>>>>>>> 53848c9fa33a913f0bf291a8c3d466541250e8cd
     "js-cookie": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -40,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/emerson-ang21/ecommerce-store-frontend.git",
+  "author": "emerson-ang21 <emersonang91@gmail.com>",
+  "license": "MIT"
 }
