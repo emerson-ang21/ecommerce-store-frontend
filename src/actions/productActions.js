@@ -4,7 +4,7 @@ import {
 } from "../constants/productConstants"
 import axios from 'axios';
 
-axios.defaults.baseURL = process.env.BASE_URL || 'https://phfarms.herokuapp.com';
+axios.defaults.baseURL = process.env.BASE_URL || 'http://localhost';
 
 const listProducts = (category = '', searchKeyword = '', sortOrder = '') => async (dispatch) => {
     try { 
